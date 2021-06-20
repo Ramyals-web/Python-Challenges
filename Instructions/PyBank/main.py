@@ -1,7 +1,7 @@
 import os
 import csv
 
-myfile = os.path.join("/Users/krengasa/Documents/BootCamp/HomeWork/Python-Challenges/Instructions/PyBank/Resources/budget_data.csv")
+myfile = os.path.join("Python-Challenges/PyBank/Resources/budget_data.csv")
 total=0
 profit_and_loss=0
 counter=0
@@ -43,7 +43,7 @@ with open(myfile) as csv_file:
 
 print(analysis)
 
-textfile = os.path.join("/Users/krengasa/Documents/BootCamp/HomeWork/Python-Challenges/Instructions/PyBank/analysis/Budget_ananlysis.txt")
+textfile = os.path.join("Homework/Python-Challenges/PyBank/analysis")
 with open(textfile,'w') as txtfile:
     txtfile.write(analysis)
 
