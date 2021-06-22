@@ -3,9 +3,9 @@
  Total Votes: 3521001
 --------------------------------
  Khan:63.00% which is 2218231 votes
- Correy:0.00% which is 0 votes
- li: 0.00% which is 0 votes
- OTooley: 0.00% which is 0 votes
+ Correy:20.00% which is 704200 votes
+ Li: 14.00% which is 492940 votes
+ O'Tooley: 3.00% which is 105630 votes
 --------------------------------
- Winner: khan
+ Winner: Khan
 --------------------------------
