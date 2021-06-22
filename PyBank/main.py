@@ -33,23 +33,20 @@ with open(myfile) as csv_file:
         total = total+1
         profit_and_loss = profit_and_loss + int(row[1]) 
         profit.append(int(row[1]))
-       
+        month.append(row[0])
     #print (len(profit))
     for i in range(len(profit)-1):
         profit_change.append(profit[i+1]-profit[i])
-        month.append(row[0])
-        
-        
+          
         #Finding the increase and decrease change in profit/loss
-        increase_profit = max(profit_change)
-        decrease_profit = min(profit_change)
-        highest_month = profit_change.index(increase_profit) 
-        lowest_month = profit_change.index(decrease_profit) 
-
-        
+    increase_profit = max(profit_change)
+    decrease_profit = min(profit_change)
+    highest_month = profit_change.index(increase_profit) +1
+    lowest_month = profit_change.index(decrease_profit) +1
+            
         #Assign the values
-        Greatest_increase = month[highest_month]
-        Greatest_decrease = month[lowest_month]
+    Greatest_increase = month[highest_month]
+    Greatest_decrease = month[lowest_month]
         
         # finding the average change
     avg_profit_change = round(sum(profit_change)/len(profit_change),2)
@@ -63,8 +60,8 @@ with open(myfile) as csv_file:
     f" Total Months: {total}\n"
     f" Total profit and loss: {profit_and_loss}\n"
     f" Average Change:{avg_profit_change}\n"
-    f" Greatest Increase in Profits:{(Greatest_increase)},({increase_profit})\n"
-    f" Greatest Decrease in Profits:{(Greatest_decrease)},({decrease_profit})\n")
+    f" Greatest Increase in Profits: {(Greatest_increase)},({increase_profit})\n"
+    f" Greatest Decrease in Profits: {(Greatest_decrease)},({decrease_profit})\n")
 
 # Printing the Analysis in Terminal
 print(analysis)
