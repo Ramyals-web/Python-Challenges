@@ -1,7 +1,7 @@
 import os
 import csv
 
-myfile = os.path.join("/Users/krengasa/Documents/BootCamp/HomeWork/Python-Challenges/Instructions/PyBank/Resources/budget_data.csv")
+myfile = os.path.join("/Users/krengasa/Documents/BootCamp/HomeWork/Python-Challenges/PyBank/Resources/budget_data.csv")
 total=0
 profit_and_loss=0
 counter=0
@@ -33,17 +33,17 @@ with open(myfile) as csv_file:
         
     avg_profit_change = round(sum(profit_change)/len(profit_change),2)
     avr_change = profit_and_loss/total
-    analysis = (f"'Financial Analysis \n"
+    analysis = (f"Financial Analysis \n"
     f"--------------------------\n"
     f" Total Months: {total}\n"
     f" Total profit and loss: {profit_and_loss}\n"
-    f"Average Change:{avg_profit_change}\n"
-    f"Greatest Increase in Profits:{increase_profit}\n"
-    f"Greatest Decrease in Profits:{decrease_profit}\n'") 
+    f" Average Change:{avg_profit_change}\n"
+    f" Greatest Increase in Profits:{increase_profit}\n"
+    f" Greatest Decrease in Profits:{decrease_profit}\n") 
 
 print(analysis)
 
-textfile = os.path.join("/Users/krengasa/Documents/BootCamp/HomeWork/Python-Challenges/Instructions/PyBank/analysis/Budget_ananlysis.txt")
+textfile = os.path.join("/Users/krengasa/Documents/BootCamp/HomeWork/Python-Challenges/PyBank/analysis/Budget_analysis.txt")
 with open(textfile,'w') as txtfile:
     txtfile.write(analysis)
 

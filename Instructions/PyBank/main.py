@@ -11,13 +11,14 @@ profit=[]
 increase_profit=0
 decrease_profit=0
 avg_profit_change=0
+
 with open(myfile) as csv_file:
     csvreader = csv.reader(csv_file)
     csv_header = next(csv_file)
-    print(f"Header: {csv_header}")
+    #print(f"Header: {csv_header}")
 
     for row in csvreader:
-        print(row)
+        #print(row)
         total = total+1
  #       if counter!=0:
         profit_and_loss = profit_and_loss + int(row[1])
@@ -33,17 +34,18 @@ with open(myfile) as csv_file:
         
     avg_profit_change = round(sum(profit_change)/len(profit_change),2)
     avr_change = profit_and_loss/total
-    analysis = (f"'Financial Analysis \n"
+    analysis = (f"Financial Analysis \n"
     f"--------------------------\n"
     f" Total Months: {total}\n"
     f" Total profit and loss: {profit_and_loss}\n"
-    f"Average Change:{avg_profit_change}\n"
-    f"Greatest Increase in Profits:{increase_profit}\n"
-    f"Greatest Decrease in Profits:{decrease_profit}\n'") 
+    f" Average Change:{avg_profit_change}\n"
+    f" Greatest Increase in Profits:{increase_profit}\n"
+    f" Greatest Decrease in Profits:{decrease_profit}\n"
+    f"--------------------------\n") 
 
 print(analysis)
 
-textfile = os.path.join("Homework/Python-Challenges/PyBank/analysis")
+textfile = os.path.join("../analysis")
 with open(textfile,'w') as txtfile:
     txtfile.write(analysis)
 
